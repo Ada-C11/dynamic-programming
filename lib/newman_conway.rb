@@ -4,12 +4,12 @@
 # Space Complexity: ?
 def newman_conway(num)
   sequence = []
-  n = num
-  while n > 0
+  n = 1
+  while n <= num 
     sequence.push(get_newman_num(n))
-    n -= 1
+    n += 1
   end
-  return sequence
+  return sequence.join(" ")
 end
 
 def get_newman_num(num)
@@ -23,3 +23,4 @@ def get_newman_num(num)
 end
 
 # puts newman_conway(20)
+
