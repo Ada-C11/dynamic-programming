@@ -2,8 +2,8 @@
 # Time Complexity: O(n)
 # Space Complexity: O(1)
 def max_sub_array(nums)
-  max_so_far = 0
-  max_ending_here = 0
+  max_so_far = nums[0]
+  max_ending_here = nums[0]
   i = 1
   while i < nums.length
       max_ending_here = max_ending_here + nums[i]
