@@ -1,8 +1,7 @@
-
-
-# Time complexity: ?  O(n)
-# Space Complexity: ?
+# Time complexity: O(n)
+# Space Complexity: O(n)
 def newman_conway(num)
+  raise ArgumentError if num < 1
   sequence = []
   n = 1
   while n <= num 
@@ -21,6 +20,3 @@ def get_newman_num(num)
     return num
   end
 end
-
-# puts newman_conway(20)
-
