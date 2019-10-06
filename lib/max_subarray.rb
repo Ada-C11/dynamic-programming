@@ -1,21 +1,21 @@
 
-# Time Complexity: O(n^2), where n is the number of elements in the array
+# Time Complexity: O(1), where n is the number of elements in the array
 # Space Complexity: O(1)
 def max_sub_array(nums)
   return 0 if nums == nil
 
-  i = 0
   max = nums[0]
+  max_here = 0
 
-  for start_val in nums
-    max_here = 0
-    for val in nums[i..-1]
-      max_here += val
-      if max_here > max
-        max = max_here
-      end
+  nums.each do |num|
+    max_here += num
+    if max_here > max
+      max = max_here
     end
-    i += 1
+
+    if max_here < 0
+      max_here = 0
+    end
   end
 
   return max
