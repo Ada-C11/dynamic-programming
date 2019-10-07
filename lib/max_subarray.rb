@@ -9,19 +9,15 @@ def max_sub_array(nums)
   end
 
   max = nums[0]
-  current_sum = nums[0]
-  j = 1
+  current_sum = 0
 
-  nums.each_with_index do |outer_num, i|
-    current_sum = outer_num
-    j = i + 1
-
-    nums[i..-1].each do
-      current_sum += nums[j] unless nums[j] == nil
-      j += 1
-      if current_sum > max
-        max = current_sum
-      end
+  nums.each do |num|
+    current_sum += num
+    if max < current_sum
+      max = current_sum
+    end
+    if current_sum < 0
+      current_sum = 0
     end
   end
 
