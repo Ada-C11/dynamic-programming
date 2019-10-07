@@ -51,4 +51,5 @@ describe "Newman Conway Tests" do
         # Assert
         expect(answer).must_equal "1 1"        
   end
+
 end
