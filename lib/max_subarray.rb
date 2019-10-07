@@ -1,5 +1,5 @@
 
-# Time Complexity: O(n ** 2), where n is the number of elements in the input array.
+# Time Complexity: O(n), where n is the number of elements input in the array.
 # Space Complexity: O(1)
 def max_sub_array(nums)
   if nums == nil || nums == []
