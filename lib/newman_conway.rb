@@ -1,5 +1,5 @@
-# Time complexity: O(n) where n is the size of num
-# Space Complexity:
+# Time complexity: O(n) where n is the value of num
+# Space Complexity: O(n) where n is the value of num
 def newman_conway(num)
   raise ArgumentError if num == 0
 
