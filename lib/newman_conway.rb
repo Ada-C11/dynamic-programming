@@ -1,5 +1,5 @@
-# Time complexity: ?
-# Space Complexity: ?
+# Time complexity: O(n), where n is directly proportional to the size of num
+# Space Complexity: O(n), where n is directly proportional to the size of num
 def newman_conway(num)
   if num <= 0 
     raise ArgumentError, "Must pass in integer greater than zero, received: #{num}" 
