@@ -1,7 +1,26 @@
-
-
 # Time complexity: ?
 # Space Complexity: ?
 def newman_conway(num)
-  raise NotImplementedError, "newman_conway isn't implemented"
+  if num <= 0 
+    raise ArgumentError, "Must pass in integer greater than zero, received: #{num}" 
+  end 
+
+  hash = {1 => 1, 2 => 1}
+  result = []
+  count = 1
+
+  while count <= num 
+    if count == 1 || count == 2 
+      result.push(1)
+    else 
+      last = hash[count - 1] 
+      current = hash[last] + hash[count - last]
+      hash[count] = current 
+      result.push(current) 
+    end 
+    
+    count += 1
+  end
+  
+  return result.join(" ")
 end
