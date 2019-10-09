@@ -8,7 +8,7 @@ def max_sub_array(nums)
   max_ending_here = 0
 
   nums.each do |num|
-    max_ending_here += num
+    max_ending_here = max_ending_here + num
     max_so_far = max_ending_here if !max_so_far || max_ending_here > max_so_far
     max_ending_here = 0 if max_ending_here < 0
   end
