@@ -1,7 +1,13 @@
 
 
-# Time complexity: ?
-# Space Complexity: ?
+# Time complexity: O(n)
+# Space Complexity: O(n)
 def newman_conway(num)
-  raise NotImplementedError, "newman_conway isn't implemented"
+  seq = [0, 1, 1]
+  raise ArgumentError if num <= 0
+  return seq[1..num].join(' ')if num == 1 || num == 2
+  (3..num).each do |i|
+    seq[i] = seq[seq[i-1]] + seq[i - seq[i - 1]]
+  end
+  return seq[1..num].join(' ')
 end
