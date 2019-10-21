@@ -10,20 +10,12 @@ def max_sub_array(nums)
   (1...nums.length).each do |i|
     current_sum += nums[i]
 
-<<<<<<< HEAD
     if current_sum > max
       max = current_sum
     end
 
     if current_sum < 0
       current_sum = 0
-=======
-    if nums[i] > current_sum
-      max = nums[i] if nums[i] > max
-      current_sum = nums[i]
-    else
-      max = current_sum if current_sum > max
->>>>>>> ae90e4cbdf7ee33dfe0aff39878d4b18fc75301e
     end
   end
 
